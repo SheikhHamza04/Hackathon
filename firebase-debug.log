@@ -1,0 +1,30 @@
+[debug] [2023-10-08T17:30:50.980Z] ----------------------------------------------------------------------
+[debug] [2023-10-08T17:30:50.983Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\xheik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-10-08T17:30:50.983Z] CLI Version:   12.6.2
+[debug] [2023-10-08T17:30:50.984Z] Platform:      win32
+[debug] [2023-10-08T17:30:50.984Z] Node Version:  v18.18.0
+[debug] [2023-10-08T17:30:50.986Z] Time:          Sun Oct 08 2023 22:30:50 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-10-08T17:30:50.986Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-08T17:30:51.121Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-08T17:30:51.122Z] > authorizing via signed-in user (xheikhhamza04@gmail.com)
+[debug] [2023-10-08T17:30:51.122Z] [iam] checking project sticky-wall-todos for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-10-08T17:30:51.125Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sticky-wall-todos:testIamPermissions [none]
+[debug] [2023-10-08T17:30:51.125Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sticky-wall-todos:testIamPermissions x-goog-quota-user=projects/sticky-wall-todos
+[debug] [2023-10-08T17:30:51.126Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sticky-wall-todos:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-08T17:30:52.985Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sticky-wall-todos:testIamPermissions 200
+[debug] [2023-10-08T17:30:52.986Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sticky-wall-todos:testIamPermissions {}
+[debug] [2023-10-08T17:30:52.986Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project sticky-wall-todos:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-10-08T17:30:52.989Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sticky-wall-todos [none]
+[debug] [2023-10-08T17:30:53.619Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sticky-wall-todos 403
+[debug] [2023-10-08T17:30:53.620Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sticky-wall-todos {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-10-08T17:30:53.623Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-10-08T17:30:54.018Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\xheik\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\xheik\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project sticky-wall-todos. Please make sure the project exists and your account has permission to access it.
